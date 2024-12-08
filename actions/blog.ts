@@ -2,7 +2,6 @@
 
 import { auth } from "@/auth";
 import { prisma } from "@/lib/prisma";
-import { title } from "process";
 
 // fetch all blogs
 export const getAllBlogs = async () => {
@@ -129,9 +128,10 @@ export const saveBlog = async (formData: FormData) => {
       userId,
     };
 
-    const savePost = await prisma.savePost.create({
+     await prisma.savePost.create({
       data: saveData,
     });
+   
   } catch (error) {
     console.error("Error on saving blog => ", error);
     throw new Error("Failed to save blog");

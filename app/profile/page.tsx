@@ -44,10 +44,8 @@ const page = async () => {
 
         {/* save posts */}
         <div className="  m-2 grid gap-4">
-          <h2>save posts</h2>
-          <div className="flex gap-3 flex-wrap items-center justify-around">
-            {/* <div className=" w-[130px] mb-20 h-[130px] m-2 rounded-md border border-info"></div> */}
-
+          <h2 className=" text-xl uppercase font-semibold m-3 ">save posts</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 place-items-center place-content-between w-full gap-3 ">
             {saveBlog.map((save) => {
               return (
                 <SaveCard

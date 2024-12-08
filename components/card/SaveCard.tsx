@@ -1,6 +1,7 @@
 'use client'
 import { useRouter } from "next/navigation";
 import React from "react";
+import DeleteBtn from "../button/DeleteBtn";
 
 type SaveProps = {
   id: string;
@@ -16,8 +17,8 @@ const SaveCard = ({id, tag, title }: SaveProps) => {
         onClick={() => {
           router.push(`/blog/${id}`);
         }}
-        className=" w-[130px] mb-20 h-[130px] m-2 rounded-md border border-info
-        flex flex-col items-center justify-center bg-violet-700 text-white 
+        className=" w-1/2 mb-20 h-[130px] m-2 rounded-md border text-white
+        flex flex-col items-center justify-center bg-primary 
      hover:cursor-pointer shadow-md
      "
       >

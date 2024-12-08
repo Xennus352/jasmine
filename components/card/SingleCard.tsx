@@ -1,4 +1,4 @@
-import { BookMarked, ChevronRightIcon, Ellipsis } from "lucide-react";
+import { ChevronRightIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -33,6 +33,8 @@ const SingleCard = async ({
 
   const user = await getUser({ userId });
 
+ 
+
   const words = description.split(" ");
   const hasMoreThan50Words = words.length > 50;
   const truncatedDescription =
@@ -58,7 +60,7 @@ const SingleCard = async ({
           </div>
         </div>
         <div className="flex  items-center gap-3 m-2 ">
-          <SaveBtn blogId={id} userId={userId} />
+          <SaveBtn blogId={id} userId={session?.user?.id} />
           <div className={` ${session?.user?.role === "USER" && "hidden"} `}>
             <ThreeDots id={id} />
           </div>
